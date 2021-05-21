@@ -1,0 +1,715 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+html,body{
+	height: 100%;
+}
+
+.container{
+	max-width: 900px;
+	margin:0 auto;
+}
+
+.clear{
+	clear: both;
+}
+section.main{
+    position: relative;/*relative aqui, ai o absolute ligado é o layer q vai preencher com opacidade toda a imagem q tá aqui no main*/
+    background-image: url(../imagens/close-up-of-businessman-with-digital-tablet.jpg);
+    background-attachment: fixed;
+    background-size: cover;/*cover vai ajustar a imagem*/
+    background-position: center;/*centraliza a imagem e a deixa certinha*/
+    width: 100%;
+    padding: 15px 0; /*distancia pra onde vai começar a logo e o menu*/
+    min-height: 600px;/*menor q isso nao pode!minimo tem q ser isso, se for maior o background cresce e acomapnha*/
+}
+
+.layer{/*layer dá um efeito de imagem mais escura pra sobrescrever o texto*/
+    position: absolute; /*fica absoluto em relação ao relative mais proximo, no caso ao do main*/
+    left: 0;
+    top: 0;
+    width: 100%;/*100% da section.main*/
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+section.main header{/*a ordem é: relative pro header, onde tem o conteudo, z index é o maior pois queremos destaque a eles,depois position relative pra imagem e o absolute do layer em relação à imagem, porém o layer n ganha do menu, por isso q seu z-index é menor, q fica mais por baixo */
+    position: relative; /*vai ser jogado pra frente da ovelay preta...fica relativa, ou seja, age como uma div pai*/
+    z-index: 2;/*quanto mais alto, mais acima, faz com q o menu fique por cima da imagem e do layer*/
+}
+
+
+header nav{
+	float: right;
+}
+
+header .logo{
+	float: left;
+	position: relative;
+	top: 8px;/*pra alinhar com menu*/
+	font-size: 30px;
+	color: white;
+	font-family: 'Lobster Two', cursive;
+	cursor: pointer;
+}
+
+
+header nav.menu-desktop{
+	position: relative;
+	top: 15px;
+}
+
+header nav.menu-desktop ul{
+	list-style-type: none;
+}
+
+header nav.menu-desktop li{
+	float: left;
+	padding:0 20px;
+}
+
+header nav.menu-desktop li a{
+	text-decoration: none;
+	color: white;
+	font-size: 21px;
+	font-weight: lighter;
+}
+
+nav.menu-desktop ul li:hover{/*efeito de quando passa o mouse pela lista ou menu*/
+	border-bottom: 1px solid white;
+}
+
+nav.menu-mobile{
+    display: none;
+    float: right;
+}
+nav.menu-mobile ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 96px;
+    list-style-type: none;
+    background-color: white;
+    width: 100%;
+    z-index: 2;/*tá dentro do main header */
+}
+
+nav.menu-mobile li{
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(95, 95, 230);
+}
+
+nav.menu-mobile a{
+    display: block;
+    text-decoration: none;
+    color: rgb(95, 95, 230);
+    font-weight: bold;
+}
+
+nav.menu-mobile > i{
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    top: 10px;
+    left: -10px;
+}
+
+
+.chamada1{
+	max-width: 600px;
+	float: right;
+	margin:140px 150px;
+}
+.chamada1 span{
+	color: rgb(95, 95, 230);
+	font-weight: bold;
+}
+
+.chamada1 h3{
+	font-size: 40px;
+	color:white;
+	font-weight:lighter;
+	max-width: 900px;
+	
+}
+
+.chamada1 p{
+	font-size: 17px;
+	color:  white;
+	margin-top:15px;
+	font-weight:500;
+
+}
+
+section.sessao1{
+	width: 100%;
+	background :white;
+	padding: 0 2%;
+	height: 400px;
+	background-color: rgb(220, 220,220);
+}
+
+section.sessao1 .container{
+	
+	max-width: 1000px;
+
+}
+
+.texto-sessao1{
+	
+	margin-top:63px;/*aqui e no padding left logo abaixo, podemos aproximar mais as imagens , no caso o device(celular) e o texto, o que dá um efeito mais bonito pra página*/
+	padding-left: 75px;
+	float: left;
+	color:black;
+	width: 50%;
+	position: relative;/*mexendo aqui e no left abaixo, pode colidir os objetos(no caso o  texto e a imagem do device) sem que as linhas quebrem ou que um dos dois caia.*/
+	left: 60px;
+}
+
+.texto-sessao1 h2{
+	font-weight: bold;
+	margin-top: 2px;
+	color: rgb(95, 95, 230);
+}
+
+.texto-sessao1 p{
+	font-size: 26px;
+	font-weight: bold;
+	margin-top: 13px;
+	
+}
+
+.texto-sessao1 ul {
+	list-style-position: outside;
+	font-size: 18px;
+	margin-top: 12px;
+	padding-left: 15px;
+	font-weight: bold;
+}
+
+.texto-sessao1 ul li{
+	float: left;
+	width: 100%;
+	margin-top: 8px;
+}
+
+.botao{
+	background-color:  rgb(95, 95, 230);
+	width: 165px;
+	height: 44px;
+	color: black;
+	cursor: pointer;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 44px; /*centraliza na vertical de acordo com a height*/
+	border-radius: 30px;
+	position: relative;
+	top: -10px;
+
+}
+.botao span{
+	font-weight: bold;
+}
+
+
+.device-sessao1{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 400px;
+	background-image: url(../imagens/device.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;	
+}
+
+
+
+.sessao3{
+	width: 100%;
+}
+
+.part1{/*essa parte serve pra separar duas  telas  em 50%, ou seja, parte um e parte dois em uma mesmo container, lado a lado! */
+	float: left;
+	width: 50%;
+	padding: 140px 0 90px 0;
+	background-color: rgb(95, 95, 230);
+	color: white;
+	
+}
+
+/*IMPORTANTE, ensina no html a como flutuar divs uma dentro da outra*/
+.wraper-part1{/*botei o wraperpart1 dentro do part1 para que ele englobasse todos elementos , no caso era o h2 e o p , dai dentro do elemento flutuado, flutuar outra coisa também*/
+	max-width: 500px;
+	float: right;
+	padding: 0 30px;/*padding de 0 cima baixo e 30px direita e esquerda no nome e no titulo ja q estao englodados no wraper*/
+	
+}
+
+.part1 h2{
+	font-weight: 300;
+	font-style:italic;
+	font-size: 23px;
+}
+
+.part1 p{
+	font-size: 15px;
+	line-height: 35px;
+	color: white;
+	margin-top: 10px;
+}
+
+.part2{
+	float: left;
+	padding: 140px 0 90px 0;
+	width: 50%;	
+	height: 100%;
+	background-color: rgb(220, 220,220);
+}
+
+/*aqui é o scroll do js*/
+.scrollEquipe{
+	padding-left: 20px;
+	max-width: 500px;
+	overflow: hidden;/*vai servir pra n mostrar a div com sobras dos outros sobres*/
+}
+
+.scroll-wraper{/*engloba todos scrolls*/
+	width: 100%;
+}
+
+/*IMPORTANTE, aqui mostra como começar a fazer o outro lado q vai ser dividido, tendo em vista que o do lado esquerdo ja foi feito, dai agora precisa encaixar o direito*/
+.sobre-mim{
+	float: left;
+	width: 100%;
+	padding: 0 20px;/*pra q esconda na hora do slide as letras q ficam transbordando*/
+	
+	
+}
+
+/*aqui tô flutuado o título*/
+.titulo-autor{
+	float: left;
+	width: 100%; /* pra deixar o título em uma linha só  e não misturar com resto do conteúdo.*/
+
+}
+
+.wraper-titulo-autor{
+	
+	float: left;
+}
+
+/*aqui tô ajustando pra que a imagem e o titulo fiquem numa posição lado a lado*/
+.titulo-autor h2{
+	color: rgb(95, 95, 230);
+	font-weight:bold;
+	font-size: 25px;
+	padding-right: 20px;/*aqui é o espaço entre o título e a imagem*/
+}
+
+.titulo-autor p{
+	font-size: 13px;
+	color: rgb(95, 95, 230);
+	font-style: italic;
+	font-weight: 600;
+}
+
+/*aqui tô ajustando pra que a imagem e o titulo fiquem numa posição lado a lado*/
+.titulo-autor .imagem-autor{
+	float: left;
+	width: 40px; /*tamanho da imagem*/
+	padding-top: 40px;/*tamanho da imagem*/
+	border-radius: 20px;
+	background-color: transparent;
+	/*pra botar a imgem */
+	background-image: url('../imagens/euautor.png');
+	background-size: 100% 100%;
+	/*fim de onde bota a imagem(mostrar que precisa do bacground-size)*/
+	position: relative;/*agora posso botar onde quiser a imagem :D*/
+	
+	
+}
+
+.texto-autor{
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	
+}
+
+.texto-autor p{
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+	
+}
+
+.bolinhas{
+	width: 100%;
+	float: left;
+	margin-top: 12px;
+	/*importante que seja padding left e nao margin left dá um overflow(aquela barrinha do navegador) , overflow ocorre pq o width tá em 100%, da com mais os pixels q adicionamos(30px) , vai ficar com 100% + 30px da passa o limite e cria a barrinha com a margin, mas sendo padding nao cria!*/
+	padding-left:40px;
+}
+
+.bolinhas span{
+	width: 16px;
+	height: 16px;
+	float: left;/*tem que ter o float aqui no span pois span é display inline*/
+	background-color:rgb(95, 95, 230);
+	border-radius: 8px;
+	margin-right: 8px;
+	cursor: pointer;
+}
+
+/*sessao diferenciais*/
+section.diferenciais{
+	background: white;
+	padding: 70px 0;
+}
+
+section.diferenciais > .container > h2{/*específico pro h2 diretamente dentro*/
+	text-align: center;
+	font-size: 23px;
+	font-weight: 300;
+	margin-bottom: 60px;
+	color: rgb(95, 95, 230);
+	font-weight: bold;
+}
+
+
+.box-single-diferencial{/*cada diferencial pra dividir pra 3 e os  3 aparecerem*/
+	float: left;
+	width: 33.3%;
+	padding: 0 10px;
+}
+
+.box-single-diferencial h2{/*da pra mexer no icone q pegamos do font awesome e deixar ele combinando com nosso site!*/
+	font-size: 90px;
+	color: rgb(95, 95, 230);
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.box-single-diferencial p{
+	color:black;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.sessao4{
+	background-color: rgb(95, 95, 230);
+	padding: 100px 0;
+}
+
+.formu{
+	float: left;
+	width: 50%;
+	color: white;
+	padding-left: 15px;
+}
+
+.formu h2{
+	font-size: 23px;
+	font-weight: 300;
+}
+
+.formu p{
+	padding-right: 10px;/*pra quando o responsivo for aplicado, não quebrar o site */
+	font-size: 15px;
+	font-weight: 300;
+	max-width: 400px;/*limita até aqui pra ficar o conteudo pra baixo quando chegar em 400px e deixar mais bonito o site*/
+}
+
+.formu form {
+	margin-top: 15px;
+}
+
+.formu span{
+	font-weight: bold;
+}
+
+.formu form input[type=text]{
+	width: 90%;/*os inputs de onde bota o nome, email , etc , vao ficar um em baixo do outro pq um vai ocupar 100% da div flutuada pra formulario*/
+	max-width: 480px;
+	height: 58px;
+	padding-left: 8px;
+	line-height: 58px;
+	border: 1px solid rgb(200,200,200);
+	margin-top: 8px;
+}
+
+.formu form textarea{
+	width: 90%;/*os inputs de onde bota o nome, email , etc , vao ficar um em baixo do outro pq um vai ocupar 100% da div flutuada pra formulario*/
+	max-width: 480px;
+	padding: 6px;
+	height: 160px;
+	border: 1px solid rgb(200,200,200);
+	margin-top: 8px;
+}
+
+.formu form input[type=submit]{
+	background-color: rgb(5, 5, 51);
+	width: 165px;
+	height: 44px;
+	color:white	;
+	cursor: pointer;
+	margin-top: 15px;
+	border: 0;
+	border-radius: 30px;
+	font-weight: bold;
+}
+
+.map-wraper{
+	float: left;
+	width: 50%;
+	color: white;
+	padding: 0 10px;
+}
+
+.map-wraper h2{
+	font-size: 23px;
+	font-weight: 300;
+	color: white;
+}
+
+.map-wraper2{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding-top: 100%;
+}
+
+.map-wraper3{
+	width:100%;
+	max-width: 480px;
+	position: relative;
+	margin-top: 10px;
+}
+
+.map{
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	border: 5px solid rgb(200,200,200);
+}
+footer{
+	background: rgb(200,200,200);
+	padding: 40px 2%;
+	color:black;
+	font-weight: bold;
+}
+
+footer p:nth-of-type(1){/*pegue o primeiro parágrafo dentre os p*/
+	float: left;
+	font-size: 14px;
+	
+}
+
+footer p:nth-of-type(2){/*pegue o segundo, uso de pseudoclasse aqui pra treinar!*/
+	float: right;
+	font-size: 14px;
+}
+
+
+@media screen and (max-width : 800px){
+	.part1{
+		width: 100%;
+	}
+
+	.part2{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width : 768px){
+
+
+	section.main{
+		padding:40px 2%;
+	}
+	
+	nav.menu-desktop{
+		display: none;
+	}
+
+	nav.menu-mobile{
+		display: block;
+	}
+
+	.chamada1{
+		max-width: none;/*junto com width 100% e o text-align center, deixa no mobile centralizado pra quando a pessoa for mexer pelo celular tá tudo bonitinho no meio*/
+		width: 100%;
+		text-align: center;
+		float: none;/*tira float pra ficar*/
+		margin:100px 0;/*reajusta a chamada pra n ter dimensao e ficar com px padrão, depois podemos mecher nela pra mudar de posição a frase de chamada*/
+	}
+	
+	.chamada1 h2{
+		font-size: 35px;
+		padding: 0 7px;/*afasta bem pouquinho o h2 pra dar sensasção de um começo de parágrafo separado,deixa bem mais bonito*/
+		
+	}
+	section.sessao1{
+		text-align: center;
+		background-color:rgb(220, 220,220);
+		padding: 40px 2%;/* padding foi pra 40px */
+		height: auto; /*primeiro passo pra deixar responsivo e não quebrar, aqui deixa o backbroound de acordo com o conteúdo que vai ser colocado*/
+	}
+	.texto-sessao1{
+		width: 100%;
+		float: none;
+		margin-top: 0;
+		position: static;
+		display: inline-block;/*pra poder ficar todas palavras na linha*/
+		padding-left: 0;/*reseta o padding left já posto pra que quando seja redimensionado pra valores menores, o texto seja posto todo em uma única linha e não quebre!*/
+
+	}
+
+	 .texto-sessao1 ul{
+		 display: inline-block;/*pra deixar a lista no meio e uma bolinha em baixo da outra*/
+		 width: auto;/*pra deixar a lista no meio e uma bolinha em baixo da outra*/
+		 margin-top: 20px;
+	 }
+
+
+	.texto-sessao1 ul li{
+		float: none;/*reseta pra mexer depois*/
+		text-align: left;/*pra deixar a lista no meio e uma bolinha em baixo da outra*/
+	}
+
+	.botao{
+		display: inline-block;
+	}
+
+	.device-sessao1{
+		display: none;/*faz ele sumir pois nas versões mobile não será útil */
+	}
+
+	.sessao2{
+		padding: 40px 2%;
+	}
+
+	section.sessao4 .container{
+		text-align: center;
+	}
+
+	.formu{
+		width: 100%;
+		float: none;
+	}
+
+	.formu p{
+		display: inline-block;/*quando se trabalha com max-width tem que botar o display inline block pra que os texto se entendam como parrágrafo e n fiquem dispersos*/
+	}
+
+	.map-wraper{
+		width: 100%;
+		float: none;
+		margin-top: 40px;
+		padding: 0 4%;
+	}
+
+	.map-wraper2{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		padding-top: 0;
+		height: 100%;
+	}
+	
+	.map-wraper3{
+		display: inline-block;/*pra centralizar já que temos max-widht*/
+		width:80%;
+		padding-top: 80%;
+		max-width: none;
+		position: relative;
+		margin-top: 10px;
+	}
+
+	section.diferenciais{
+		background: rgb(200,200,200);
+		padding: 70px 0;
+	}
+
+	.box-diferenciais{/*eh a geral*/
+		margin-top: 0px;
+	}
+
+	.box-single-diferencial{
+		width: 100%;
+		text-align: center;
+		margin-top: 25px;
+	}
+
+	.box-single-diferencial p{
+		display: inline-block;
+		max-width: 500px;/*pro texto n ficar grandao, limitar ele num width*/
+	}
+}
+
+
+@media screen and (max-width: 580px){
+	.part1{
+		width: 100%;/*deixa com 100% da tela ficando um embaixo do outro quando a resolução for menor , no caso as  telas de celular*/
+		padding: 40px 0;/*diminui o espaçamento quando for pro celular pra n ficar espaço sobrando*/
+	}
+
+	.part2{
+		width: 100%;/*/*deixa com 100% da tela ficando um embaixo do outro quando a resolução for menor , no caso as  telas de celular*/
+		padding: 40px 30px;/*diminui o espaçamento quando for pro celular pra n ficar espaço sobrando*/
+	}
+
+	.sessao2 img{
+		position: relative;
+		margin-top: 10px;
+		top: 23px;
+	}
+	.sessao2{
+		text-align: center;
+		padding-left: 80px 2%;
+		padding-right: 2%;
+		height: 405px;
+	}
+
+	footer{
+		text-align: center;
+
+		
+	}
+	
+	footer p:nth-of-type(1){/*pegue o primeiro parágrafo dentre os p*/
+		float: none;
+		
+	
+		
+		
+	}
+	
+	footer p:nth-of-type(2){/*pegue o segundo, uso de pseudoclasse aqui pra treinar!*/
+		float: none;
+		margin-top: 10px;
+		
+		
+	}
+
+	
+	
+	
+	
+}
+
+
+
