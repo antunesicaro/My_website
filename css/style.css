@@ -19,7 +19,7 @@ html,body{
 }
 section.main{
     position: relative;/*relative aqui, ai o absolute ligado é o layer q vai preencher com opacidade toda a imagem q tá aqui no main*/
-    background-image: url(../imagens/close-up-of-businessman-with-digital-tablet.jpg);
+    background-image: url(../imagens/adeolu-eletu-unRkg2jH1j0-unsplash.jpg);
     background-attachment: fixed;
     background-size: cover;/*cover vai ajustar a imagem*/
     background-position: center;/*centraliza a imagem e a deixa certinha*/
